@@ -1,0 +1,72 @@
+.logoLink {
+  text-decoration: none;
+  display: block;
+  transition: transform var(--transition-fast);
+}
+
+.logoLink:hover {
+  transform: translateY(-1px);
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  width: 100%;
+}
+
+.logoIcon {
+  font-size: var(--text-base);
+  color: var(--primary-600);
+  transition: all var(--transition-fast);
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.logoLink:hover .logoIcon {
+  color: var(--primary-700);
+  transform: rotate(-5deg);
+}
+
+.logoText {
+  font-size: var(--text-lg);
+  font-weight: 500;
+  font-family: var(--font-display);
+  background: linear-gradient(135deg, var(--primary-600), var(--secondary-600));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.5px;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.accent {
+  background: linear-gradient(135deg, var(--secondary-600), var(--primary-400));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: var(--text-lg);
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .logoContainer {
+    gap: var(--space-sm);
+  }
+
+  .logoIcon {
+    font-size: var(--text-lg);
+    width: 24px;
+    height: 24px;
+  }
+
+  .logoText {
+    font-size: var(--text-xl);
+  }
+
+  .accent {
+    font-size: var(--text-xl);
+  }
+}

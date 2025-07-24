@@ -1,0 +1,105 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-xs);
+  margin-top: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.pageButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-xs) var(--space-sm);
+  background: white;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  text-decoration: none;
+  font-size: var(--text-xs);
+  font-weight: 500;
+  min-width: 28px;
+  min-height: 32px;
+  transition: all var(--transition-fast);
+  color: var(--gray-600);
+}
+
+.pageButton:hover {
+  background: var(--primary-50);
+  border-color: var(--primary-300);
+  color: var(--primary-600);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.pageButton:focus {
+  outline: none;
+  box-shadow: var(--shadow-focus-md);
+  border-color: var(--primary-500);
+}
+
+.pageButton.active {
+  background: var(--primary-600);
+  border-color: var(--primary-600);
+  color: white;
+  box-shadow: var(--shadow-sm);
+}
+
+.pageButton.active:hover {
+  background: var(--primary-700);
+  border-color: var(--primary-700);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.pageButton:disabled {
+  background: var(--gray-100);
+  border-color: var(--gray-200);
+  color: var(--gray-400);
+  cursor: not-allowed;
+}
+
+.pageButton.ellipsis {
+  padding: var(--space-xs) var(--space-xs);
+  background: transparent;
+  border: none;
+  cursor: default;
+  font-size: var(--text-xs);
+}
+
+.pageButton.ellipsis:hover {
+  background: transparent;
+  border: none;
+  color: var(--gray-600);
+}
+
+.pageInfo {
+  color: var(--gray-600);
+  font-size: var(--text-xs);
+  margin: 0 var(--space-sm);
+}
+
+@media (min-width: 768px) {
+  .pagination {
+    gap: var(--space-sm);
+    margin-top: var(--space-xl);
+  }
+
+  .pageButton {
+    padding: var(--space-sm) var(--space-md);
+    font-size: var(--text-sm);
+    min-width: 32px;
+    min-height: 36px;
+  }
+
+  .pageButton.ellipsis {
+    padding: var(--space-sm) var(--space-sm);
+    font-size: var(--text-sm);
+  }
+
+  .pageInfo {
+    font-size: var(--text-sm);
+    margin: 0 var(--space-md);
+  }
+}

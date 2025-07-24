@@ -1,0 +1,13 @@
+.authNav {
+  display: flex;
+  gap: var(--space-xs);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+  .authNav {
+    gap: var(--space-sm);
+    flex-wrap: nowrap;
+  }
+}

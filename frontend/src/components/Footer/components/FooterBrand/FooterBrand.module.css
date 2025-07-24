@@ -1,0 +1,23 @@
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  align-items: center;
+}
+
+.tagline {
+  color: var(--gray-300);
+  font-size: var(--text-sm);
+  max-width: 280px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .brand {
+    align-items: flex-start;
+  }
+
+  .tagline {
+    text-align: left;
+  }
+}

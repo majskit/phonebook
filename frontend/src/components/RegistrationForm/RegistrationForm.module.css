@@ -1,0 +1,115 @@
+.container {
+  max-width: 380px;
+  margin: 0 auto;
+  padding: var(--space-xl);
+  background: linear-gradient(135deg, var(--primary-50), var(--secondary-50));
+  border: 1px solid var(--primary-200);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+}
+
+.title {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+  color: var(--gray-800);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(13, 148, 136, 0.1);
+}
+
+.globalError {
+  background: var(--error-50);
+  color: var(--error-600);
+  padding: 10px;
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-md);
+  text-align: center;
+  font-size: var(--text-xs);
+  border: 1px solid var(--error-300);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.button {
+  padding: 12px 18px;
+  background: linear-gradient(135deg, var(--primary-500), var(--secondary-500));
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  margin-top: var(--space-sm);
+  font-family: inherit;
+}
+
+.button:hover:not(:disabled) {
+  background: linear-gradient(135deg, var(--primary-600), var(--secondary-600));
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(20, 184, 166, 0.3);
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: var(--shadow-focus-md);
+}
+
+.button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.links {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--gray-300);
+}
+
+.linkText {
+  margin: 0;
+  color: var(--gray-600);
+  font-size: var(--text-xs);
+}
+
+.link {
+  color: var(--primary-600);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link:hover {
+  color: var(--primary-700);
+  text-decoration: underline;
+}
+
+.link:focus {
+  outline: none;
+  box-shadow: var(--shadow-focus-sm);
+  border-radius: var(--radius-sm);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: var(--space-2xl);
+  }
+
+  .title {
+    font-size: var(--text-2xl);
+    margin-bottom: var(--space-xl);
+  }
+
+  .button {
+    font-size: var(--text-base);
+  }
+
+  .linkText {
+    font-size: var(--text-sm);
+  }
+}
